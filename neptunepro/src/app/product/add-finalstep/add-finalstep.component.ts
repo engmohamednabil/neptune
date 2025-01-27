@@ -31,16 +31,10 @@ export class AddFinalstepComponent {
       if (existing) {
         
         products = JSON.parse(existing);
-          if(this.product){
-            products.push(this.product); 
-            localStorage.setItem('products', JSON.stringify(products));
-          }
-      } 
-      else {
-        if(this.product !== null){
+        if (this.product) {
           products.push(this.product);
           localStorage.setItem('products', JSON.stringify(products));
-          }
+        }
       }
 
     this.productStore.removeProduct();
